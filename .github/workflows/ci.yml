@@ -22,8 +22,12 @@ jobs:
       - name: Lint
         run: ruff check src tests
       - name: Reproduce all results offline
-        run: python -m firisk.run_all
-      - name: Results and documents match the committed versions
-        run: git diff --exit-code -- results README.md ANALYSIS.md RESUME_BULLETS.md
+        run: |
+          cp -r results "$RUNNER_TEMP/committed_results"
+          python -m firisk.run_all
+      - name: Results match the committed versions (numeric tolerance 1e-8)
+        run: python -m firisk.compare "$RUNNER_TEMP/committed_results" results
+      - name: Documents match the committed versions exactly
+        run: git diff --exit-code -- README.md ANALYSIS.md RESUME_BULLETS.md results/report_tokens.json
       - name: Tests (including QuantLib cross-check)
         run: pytest

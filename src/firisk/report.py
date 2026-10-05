@@ -39,6 +39,10 @@ def pct(x: float, nd: int = 1) -> str:
     return f"{x * 100:.{nd}f}%"
 
 
+def _bound(x: float, limit: float) -> str:
+    return f"below {limit:.0e}" if abs(x) < limit else f"{x:.1e}"
+
+
 def _md_table(df: pd.DataFrame) -> str:
     cols = list(df.columns)
     lines = ["| " + " | ".join(cols) + " |", "|" + "|".join("---" if i == 0 else "---:" for i in range(len(cols))) + "|"]
@@ -186,10 +190,11 @@ def build_tokens(a: Analysis) -> dict[str, str]:
     t["kr_sum"] = usd(p.kr_dv01.sum())
     t["kr_recon"] = f"{a.validation['kr_sum_vs_parallel_rel_diff'] * 100:.5f}%"
     t["kr_recon_bond"] = f"{a.validation['max_bond_kr_sum_vs_parallel_rel_diff'] * 100:.4f}%"
-    t["boot_err"] = f"{a.validation['bootstrap_max_abs_reprice_error']:.1e}"
+    # machine-precision quantities are reported as bounds so the text is platform independent
+    t["boot_err"] = _bound(a.validation["bootstrap_max_abs_reprice_error"], 1e-12)
     t["dv01_full"] = f"${a.validation['portfolio_dv01_full_reprice']:,.4f}"
     t["dv01_sum"] = f"${a.validation['portfolio_dv01_sum_of_positions']:,.4f}"
-    t["dv01_sum_diff"] = f"{abs(a.validation['portfolio_dv01_full_reprice'] - a.validation['portfolio_dv01_sum_of_positions']):.1e}"
+    t["dv01_sum_diff"] = _bound(abs(a.validation["portfolio_dv01_full_reprice"] - a.validation["portfolio_dv01_sum_of_positions"]), 1e-6)
     cr = p.credit_exposure()
     for rating in ("AA", "A", "BBB"):
         t[f"p_mv_{rating}"] = pct(cr.loc[rating, "weight"])

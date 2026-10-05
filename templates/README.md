@@ -81,7 +81,7 @@ the month-end and February edge cases.
 Treasury publishes **par yields**: the coupon a new bond at each maturity would need to price at exactly $100. Pricing
 needs **spot (zero-coupon) rates** instead, meaning the rate for a single payment at time *t*. The engine **bootstraps**
 them. It solves the 1M, 3M and 6M bills first, then each coupon tenor in turn, so that every input instrument reprices
-to par (largest error: {{boot_err}} per $100). **Forward rates** are the rates the curve implies *between* two future
+to par (largest error {{boot_err}} per $100). **Forward rates** are the rates the curve implies *between* two future
 dates. A **discount factor** DF(t) is the value today of $1 paid at *t*.
 
 ![curves](figures/fig03_curves.png)
@@ -272,6 +272,7 @@ src/firisk/
   pca.py        curve PCA, factor risk, VaR
   optimizer.py  constrained LP rebalance + independent constraint checker
   report.py     results files + template rendering;  plots.py figures;  run_all.py entry point
+  compare.py    tolerance-based results comparison used by CI
 templates/      README / ANALYSIS / RESUME_BULLETS templates (every number is a template token)
 results/        CSV/JSON outputs (summary.json, holdings, stress, PCA, trades, constraints)
 figures/        PNG charts

@@ -4,6 +4,7 @@ from datetime import date
 import numpy as np
 import pytest
 
+from firisk.compare import compare_dirs
 from firisk.config import FIGURES_DIR, RESULTS_DIR, ROOT, VALUATION_DATE
 from firisk.data import CurveHistory, load_history, synthetic_history
 from firisk.plots import ALL_FIGURES
@@ -58,3 +59,19 @@ def test_readme_is_explicit_about_simulation_and_has_figures():
 def test_render_rejects_unknown_tokens():
     with pytest.raises(KeyError):
         render("value {{nope}}", {})
+
+
+def test_results_compare_tolerates_last_bit_noise_only(tmp_path):
+    import shutil
+
+    exp, act = tmp_path / "e", tmp_path / "a"
+    shutil.copytree(RESULTS_DIR, exp)
+    shutil.copytree(RESULTS_DIR, act)
+    assert compare_dirs(exp, act) == []
+    f = act / "stress_before.csv"
+    text = f.read_text(encoding="utf-8")
+    first_num = text.splitlines()[1].split(",")[2]
+    f.write_text(text.replace(first_num, str(float(first_num) * (1 + 1e-12)), 1), encoding="utf-8")
+    assert compare_dirs(exp, act) == []
+    f.write_text(text.replace(first_num, str(float(first_num) + 1.0), 1), encoding="utf-8")
+    assert compare_dirs(exp, act) == ["stress_before.csv:full_pnl differs in 1 rows"]
