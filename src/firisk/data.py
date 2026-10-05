@@ -97,7 +97,7 @@ def refresh_cache(start: str = "2016-01-01") -> Path:
         "rows": int(len(frame)),
         "retrieved_utc": datetime.now(UTC).strftime("%Y-%m-%dT%H:%M:%SZ"),
     }
-    META_FILE.write_text(json.dumps(meta, indent=2) + "\n", encoding="utf-8")
+    META_FILE.write_text(json.dumps(meta, indent=2) + "\n", encoding="utf-8", newline="\n")
     return CACHE_FILE
 
 
