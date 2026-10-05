@@ -1,0 +1,2 @@
+# Optional independent cross-check (tests/test_quantlib_crosscheck.py)
+QuantLib==1.43

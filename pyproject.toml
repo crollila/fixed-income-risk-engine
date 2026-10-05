@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "firisk"
+version = "1.0.0"
+description = "From-scratch Treasury / IG corporate bond pricing and portfolio-risk engine (simulated portfolio)"
+readme = "README.md"
+requires-python = ">=3.12,<3.13"
+license = { text = "MIT" }
+authors = [{ name = "Case Ollila" }]
+dependencies = [
+    "numpy>=2.0",
+    "scipy>=1.13",
+    "pandas>=2.2",
+    "matplotlib>=3.9",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "ruff>=0.5"]
+crosscheck = ["QuantLib>=1.30"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.ruff]
+line-length = 140
+target-version = "py312"
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP"]
+ignore = ["E741"]

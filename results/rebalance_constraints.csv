@@ -1,0 +1,13 @@
+constraint,value,limit,type,pass,book
+Max issuer weight (Atlas Bancorp),0.074995,0.06,max,False,before
+Max sector weight (Financials),0.195006,0.18,max,False,before
+Min Treasury weight,0.329994,0.35,min,False,before
+One-way turnover,0.0,0.2,max,True,before
+Max single position,0.090001,0.1,max,True,before
+Long only (min weight),0.0,0.0,min,True,before
+Max issuer weight (Atlas Bancorp),0.059913,0.06,max,True,after
+Max sector weight (Financials),0.170492,0.18,max,True,after
+Min Treasury weight,0.40535,0.35,min,True,after
+One-way turnover,0.199901,0.2,max,True,after
+Max single position,0.090014,0.1,max,True,after
+Long only (min weight),0.0,0.0,min,True,after

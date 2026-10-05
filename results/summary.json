@@ -1,0 +1,335 @@
+{
+  "valuation_date": "2026-10-01",
+  "curve_source": "FRED cache",
+  "portfolio": {
+    "nav": 100000845.765514,
+    "cash": 0.0,
+    "duration": 7.227627,
+    "dv01": 72276.885714,
+    "cs01": 49092.4031,
+    "spread_duration": 4.909199,
+    "convexity": 90.154733,
+    "ytm": 0.060595,
+    "dts": 597.954517,
+    "treasury_weight": 0.329994,
+    "kr_dv01": {
+      "1M": 5.005233,
+      "3M": 22.466463,
+      "6M": -20.409276,
+      "1Y": 15.674735,
+      "2Y": 928.571344,
+      "3Y": 1936.851728,
+      "5Y": 10538.285357,
+      "7Y": 8993.658923,
+      "10Y": 17613.727307,
+      "20Y": 16812.924487,
+      "30Y": 15430.109079
+    },
+    "max_issuer": [
+      "Atlas Bancorp",
+      0.074995
+    ],
+    "max_sector": [
+      "Financials",
+      0.195006
+    ],
+    "issuer_weights": {
+      "Atlas Bancorp": 0.074995,
+      "Meridian Financial": 0.060008,
+      "Keystone Mutual Insurance": 0.060003,
+      "Vertex Systems": 0.059998,
+      "Halcyon Health": 0.059993,
+      "Harvest Foods": 0.055009,
+      "Riverstone Utilities": 0.055006,
+      "Granite Energy Partners": 0.054998,
+      "Skyline Telecom": 0.054991,
+      "Ironclad Industries": 0.050002,
+      "Quantum Devices": 0.03,
+      "Summit Rail": 0.029998,
+      "Bluewater Power": 0.025005
+    },
+    "sector_weights": {
+      "Financials": 0.195006,
+      "Technology": 0.089998,
+      "Utilities": 0.08001,
+      "Industrials": 0.08,
+      "Healthcare": 0.059993,
+      "Consumer Staples": 0.055009,
+      "Energy": 0.054998,
+      "Communications": 0.054991
+    },
+    "credit_by_rating": {
+      "AA": {
+        "market_value": 12000193.395107,
+        "cs01": 10137.916594,
+        "weight": 0.120001
+      },
+      "A": {
+        "market_value": 30500272.51589,
+        "cs01": 22528.175055,
+        "weight": 0.305
+      },
+      "BBB": {
+        "market_value": 24500699.586747,
+        "cs01": 16426.31145,
+        "weight": 0.245005
+      }
+    }
+  },
+  "benchmark": {
+    "nav": 100000845.765514,
+    "cash": 0.0,
+    "duration": 5.177443,
+    "dv01": 51774.872587,
+    "cs01": 26042.552323,
+    "spread_duration": 2.604233,
+    "convexity": 52.256687,
+    "ytm": 0.055011,
+    "dts": 302.156938,
+    "treasury_weight": 0.6,
+    "kr_dv01": {
+      "1M": 3.166776,
+      "3M": 20.927213,
+      "6M": 369.045144,
+      "1Y": -5.75407,
+      "2Y": 1798.149995,
+      "3Y": 5236.174508,
+      "5Y": 10198.653844,
+      "7Y": 8395.738033,
+      "10Y": 10683.564884,
+      "20Y": 7089.75813,
+      "30Y": 7985.43686
+    },
+    "max_issuer": [
+      "Vertex Systems",
+      0.074944
+    ],
+    "max_sector": [
+      "Financials",
+      0.12155
+    ],
+    "issuer_weights": {
+      "Vertex Systems": 0.074944,
+      "Atlas Bancorp": 0.067381,
+      "Skyline Telecom": 0.034718,
+      "Halcyon Health": 0.034182,
+      "Meridian Financial": 0.029492,
+      "Harvest Foods": 0.027865,
+      "Granite Energy Partners": 0.025965,
+      "Keystone Mutual Insurance": 0.024677,
+      "Ironclad Industries": 0.023331,
+      "Riverstone Utilities": 0.019527,
+      "Quantum Devices": 0.016132,
+      "Summit Rail": 0.012175,
+      "Bluewater Power": 0.009611
+    },
+    "sector_weights": {
+      "Financials": 0.12155,
+      "Technology": 0.091077,
+      "Industrials": 0.035505,
+      "Communications": 0.034718,
+      "Healthcare": 0.034182,
+      "Utilities": 0.029138,
+      "Consumer Staples": 0.027865,
+      "Energy": 0.025965
+    },
+    "credit_by_rating": {
+      "AA": {
+        "market_value": 9962204.896882,
+        "cs01": 6868.685028,
+        "weight": 0.099621
+      },
+      "A": {
+        "market_value": 17726326.281443,
+        "cs01": 11291.464132,
+        "weight": 0.177262
+      },
+      "BBB": {
+        "market_value": 12311807.12788,
+        "cs01": 7882.403163,
+        "weight": 0.123117
+      }
+    }
+  },
+  "rebalanced": {
+    "nav": 99986158.083095,
+    "cash": 514.945813,
+    "duration": 5.30067,
+    "dv01": 52999.361422,
+    "cs01": 40875.562259,
+    "spread_duration": 4.088122,
+    "convexity": 53.635965,
+    "ytm": 0.058047,
+    "dts": 516.432441,
+    "treasury_weight": 0.40535,
+    "kr_dv01": {
+      "1M": 4.608317,
+      "3M": 20.512811,
+      "6M": 369.048638,
+      "1Y": 20.54162,
+      "2Y": 1798.222065,
+      "3Y": 4051.055105,
+      "5Y": 10631.730881,
+      "7Y": 8987.199569,
+      "10Y": 12041.958117,
+      "20Y": 7089.398703,
+      "30Y": 7985.077112
+    },
+    "max_issuer": [
+      "Atlas Bancorp",
+      0.059913
+    ],
+    "max_sector": [
+      "Financials",
+      0.170492
+    ],
+    "issuer_weights": {
+      "Atlas Bancorp": 0.059913,
+      "Halcyon Health": 0.05991,
+      "Meridian Financial": 0.059908,
+      "Harvest Foods": 0.055017,
+      "Granite Energy Partners": 0.055006,
+      "Skyline Telecom": 0.054999,
+      "Keystone Mutual Insurance": 0.050672,
+      "Ironclad Industries": 0.05001,
+      "Riverstone Utilities": 0.039189,
+      "Quantum Devices": 0.030004,
+      "Summit Rail": 0.030002,
+      "Bluewater Power": 0.025008,
+      "Vertex Systems": 0.025006
+    },
+    "sector_weights": {
+      "Financials": 0.170492,
+      "Industrials": 0.080012,
+      "Utilities": 0.064198,
+      "Healthcare": 0.05991,
+      "Consumer Staples": 0.055017,
+      "Technology": 0.05501,
+      "Energy": 0.055006,
+      "Communications": 0.054999
+    },
+    "credit_by_rating": {
+      "AA": {
+        "market_value": 7566753.60074,
+        "cs01": 5049.71528,
+        "weight": 0.075678
+      },
+      "A": {
+        "market_value": 27399703.265405,
+        "cs01": 19405.686913,
+        "weight": 0.274035
+      },
+      "BBB": {
+        "market_value": 24489772.112768,
+        "cs01": 16420.160066,
+        "weight": 0.244932
+      }
+    }
+  },
+  "rebalance": {
+    "before": {
+      "krd_l1_gap": 2.961847,
+      "duration_gap": 2.050184
+    },
+    "after": {
+      "krd_l1_gap": 0.360212,
+      "duration_gap": 0.123226
+    },
+    "turnover": 0.199901,
+    "cost_usd": 14687.682419,
+    "n_trades": 13
+  },
+  "pca": {
+    "tenors": [
+      "1Y",
+      "2Y",
+      "3Y",
+      "5Y",
+      "7Y",
+      "10Y",
+      "20Y",
+      "30Y"
+    ],
+    "explained": [
+      0.85087,
+      0.109763,
+      0.02104,
+      0.008296,
+      0.004246
+    ],
+    "n_obs": 2687,
+    "start": "2016-01-05",
+    "end": "2026-10-01",
+    "labels": [
+      "level",
+      "slope",
+      "curvature"
+    ],
+    "all_tenor_explained": [
+      0.726752,
+      0.105936,
+      0.090121,
+      0.03931,
+      0.01514
+    ],
+    "all_tenor_pc3_1m_loading": -0.868601
+  },
+  "factor_risk_before": {
+    "exposure_per_bp": [
+      26153.487207,
+      17511.87007,
+      -1578.15215
+    ],
+    "one_sigma_daily_pnl": [
+      -354898.548059,
+      -85350.160955,
+      3367.545642
+    ],
+    "variance_share": [
+      0.945119,
+      0.054662,
+      8.5e-05
+    ],
+    "daily_sigma_total": 365057.196618,
+    "daily_sigma_3pc": 365032.833801,
+    "var99_parametric": 849250.033255
+  },
+  "factor_risk_after": {
+    "exposure_per_bp": [
+      19557.008371,
+      7263.44484,
+      3143.712619
+    ],
+    "one_sigma_daily_pnl": [
+      -265385.408084,
+      -35400.912849,
+      -6708.222478
+    ],
+    "variance_share": [
+      0.981479,
+      0.017464,
+      0.000627
+    ],
+    "daily_sigma_total": 267877.636188,
+    "daily_sigma_3pc": 267820.162988,
+    "var99_parametric": 623176.56945
+  },
+  "hist_var_before": {
+    "var99_historical": 960859.397981,
+    "worst_day": -1973182.252015,
+    "worst_day_date": "2020-03-17"
+  },
+  "hist_var_after": {
+    "var99_historical": 705243.235144,
+    "worst_day": -1480353.981595,
+    "worst_day_date": "2022-06-13"
+  },
+  "validation": {
+    "bootstrap_max_abs_reprice_error": 0.0,
+    "portfolio_dv01_full_reprice": 72276.885714,
+    "portfolio_dv01_sum_of_positions": 72276.885714,
+    "kr_sum_vs_parallel_rel_diff": -0.0,
+    "max_bond_kr_sum_vs_parallel_rel_diff": 1e-06,
+    "all_constraints_pass_after": true
+  }
+}
